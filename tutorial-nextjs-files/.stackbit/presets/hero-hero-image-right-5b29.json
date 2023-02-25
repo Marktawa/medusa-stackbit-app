@@ -1,0 +1,34 @@
+{
+    "model": "hero",
+    "srcType": "git",
+    "srcProjectId": "git_project",
+    "presets": [
+        {
+            "label": "Hero Image Right",
+            "locale": null,
+            "metadata": {
+                "categories": [
+                    "My Components"
+                ],
+                "canDelete": true
+            },
+            "data": {
+                "heading": "World's Best Cup of Coffee",
+                "body": "<!--And a super compelling supporting paragraph that makes the user immediately want to click the button below.-->\nIndulge in a world of rich, bold flavors with our expertly crafted coffee blends. From classic roasts to exotic varieties, we've got the perfect brew for every taste.\n\n",
+                "image": {
+                    "src": "/images/fpo-shapes.png",
+                    "alt": "Hero Image",
+                    "$$type": "image"
+                },
+                "button": {
+                    "label": "Get Started",
+                    "url": "/",
+                    "theme": "outline",
+                    "$$type": "button"
+                },
+                "theme": "imgRight"
+            },
+            "thumbnail": "images/hero-hero-image-right-5b29.png"
+        }
+    ]
+}
