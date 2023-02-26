@@ -5,9 +5,10 @@ import CardGridSection from './.stackbit/models/CardGridSection';
 import FooterConfig from './.stackbit/models/FooterConfig';
 import HeroSection from './.stackbit/models/HeroSection';
 import SiteConfig from './.stackbit/models/SiteConfig';
+import AllProducts from './.stackbit/models/AllProducts';
 
 const sbConfig = {
-  stackbitVersion: '~0.5.0',
+  stackbitVersion: '~0.6.0',
   ssgName: 'nextjs',
   cmsName: 'git',
   nodeVersion: '16',
@@ -28,6 +29,7 @@ const sbConfig = {
     FooterConfig,
     HeroSection,
     SiteConfig,
+    AllProducts,
   },
 };
 

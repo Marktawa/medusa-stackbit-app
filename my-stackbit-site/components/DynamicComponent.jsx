@@ -1,9 +1,11 @@
 import { HeroSection } from './HeroSection';
 import { CardGridSection } from './CardGridSection';
+import { AllProducts } from './AllProducts';
 
 const componentsMap = {
   HeroSection: HeroSection,
   CardGridSection: CardGridSection,
+  AllProducts: AllProducts,
 };
 
 export const DynamicComponent = (props) => {
