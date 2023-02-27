@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from "react";
+import Link from 'next/link';
 
 export const AllProducts = (props) => {
   const [products, setProducts] = useState([]);
@@ -19,10 +20,11 @@ export const AllProducts = (props) => {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Price: ${product.variants[0].prices[0].amount}</p>
-            <p>{product.handle}</p>
+            <Link href={`/store/${product.id}`}>
+              <h2>{product.title}</h2>
+              <p>{product.description}</p>
+              <p>Price: ${product.variants[0].prices[0].amount}</p>
+            </Link>
           </li>
         ))}
       </ul>
