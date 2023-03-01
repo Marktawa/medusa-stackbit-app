@@ -18,7 +18,7 @@ export const AllProducts = (props) => {
       name: item.title,
       id: item.id,
       description: item.description,
-      price: product.variants[0].prices[0].amount
+      price: item.variants[0].prices[0].amount
     };
    }));
 
