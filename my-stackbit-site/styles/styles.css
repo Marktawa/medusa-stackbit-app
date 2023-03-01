@@ -219,3 +219,40 @@ p {
 .header-nav a:hover {
   color: var(--color-yellow);
 }
+
+/* ---- Store ---- */
+.outer.heading-box {
+  background-image: url("/bg.svg");
+  background-repeat: repeat;
+  background-color: rgb(193, 189, 189);
+  padding: 5rem 0rem;
+}
+
+.inner.heading-box {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: rgb(4, 4, 83);
+}
+
+.inner.store-box {
+  text-align: center;
+  padding: 1rem 0rem;
+}
+
+ul.store-list {
+  list-style: none;
+}
+
+ul.store-list p {
+  font-size: 1.5rem;
+  color: darkblue;
+}
+
+ul.store-list li {
+  border: 0.1rem solid lightgray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 2rem 0rem;
+  background: #FAFAFA;
+}

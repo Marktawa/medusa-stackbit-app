@@ -14,19 +14,27 @@ export const AllProducts = (props) => {
   }, []);
 
   return (
-    <div>
-      <h1>{props.heading}</h1>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <Link href={`/store/${product.id}`}>
-              <h2>{product.title}</h2>
-              <p>{product.description}</p>
-              <p>Price: ${product.variants[0].prices[0].amount}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <div data-sb-field-path={props['data-sb-field-path']}>
+      <div className="outer heading-box">
+        <div className="inner heading-box">
+          <h1 className="store-heading" data-sb-field-path=".heading">{props.heading}</h1>
+        </div>
+      </div>
+      <div className="outer store-box">
+        <div className="inner store-box">
+          <ul className="store-list">
+            {products.map((product) => (
+              <li key={product.id}>
+                <Link href={`/store/${product.id}`}>
+                  <h2>{product.title}</h2>
+                  <img src={`${product.thumbnail}`} width="250"></img>
+                  <p>${product.variants[0].prices[0].amount}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
