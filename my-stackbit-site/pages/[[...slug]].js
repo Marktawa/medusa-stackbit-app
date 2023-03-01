@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import { DynamicComponent } from '../components/DynamicComponent';
 import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
 import { pagesByType, siteConfig, urlToContent } from '../utils/content';
 
 const FlexiblePage = ({ page, siteConfig }) => {
@@ -10,6 +11,7 @@ const FlexiblePage = ({ page, siteConfig }) => {
       <Head>
         <title>{page.title}</title>
       </Head>
+      <Header siteConfig={siteConfig} />
       <div data-sb-object-id={page.__id}>
         {page.sections?.length > 0 && (
           <div data-sb-field-path="sections">

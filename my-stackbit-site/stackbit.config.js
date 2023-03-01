@@ -6,6 +6,7 @@ import FooterConfig from './.stackbit/models/FooterConfig';
 import HeroSection from './.stackbit/models/HeroSection';
 import SiteConfig from './.stackbit/models/SiteConfig';
 import AllProducts from './.stackbit/models/AllProducts';
+import HeaderConfig from './.stackbit/models/HeaderConfig';
 
 const sbConfig = {
   stackbitVersion: '~0.6.0',
@@ -30,6 +31,7 @@ const sbConfig = {
     HeroSection,
     SiteConfig,
     AllProducts,
+    HeaderConfig,
   },
 };
 
