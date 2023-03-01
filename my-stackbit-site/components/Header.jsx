@@ -1,10 +1,14 @@
 export const Header = ({ siteConfig }) => {
     return (
-        <header>
-            <span>{siteConfig.header.title}</span>
-            {siteConfig.header.navLinks.map((navLink) => (
-                <span><a href={`${navLink.url}`}>{navLink.label}</a></span>
-            ))}
+        <header className="header outer">
+            <div className="inner">
+                <span className="header-title">{siteConfig.header.title}</span>
+                <span className="header-nav">
+                    {siteConfig.header.navLinks.map((navLink) => (
+                        <a href={`${navLink.url}`}>{navLink.label}</a>
+                    ))}
+                </span>
+            </div>
         </header>
     );
 };

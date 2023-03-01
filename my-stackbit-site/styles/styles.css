@@ -198,3 +198,24 @@ p {
 .button:hover {
   opacity: 0.85;
 }
+
+/* ---- Header ---- */
+.header {
+  background: var(--color-blue);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-white);
+  padding: 2rem 0rem;
+}
+
+.header-nav {
+  float: right;
+}
+
+.header-nav a {
+  padding-right: 1rem;
+}
+
+.header-nav a:hover {
+  color: var(--color-yellow);
+}
