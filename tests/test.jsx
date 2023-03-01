@@ -1,8 +1,7 @@
-import * as React from 'react';
 import { useState, useEffect } from "react";
 import Link from 'next/link';
 
-export default function Home() {
+export const AllProducts = (props) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -14,16 +13,25 @@ export default function Home() {
     fetchProducts();
   }, []);
 
+  props.products.splice(0, props.products.length, ...products.map((item) => {
+    return {
+      name: item.title,
+      id: item.id,
+      description: item.description,
+      price: product.variants[0].prices[0].amount
+    };
+   }));
+
   return (
     <div>
-      <h1>Our Store</h1>
+      <h1>{props.heading}</h1>
       <ul>
-        {products.map((product) => (
+        {props.products.map((product) => (
           <li key={product.id}>
             <Link href={`/store/${product.id}`}>
-              <h2>{product.title}</h2>
+              <h2>{product.name}</h2>
               <p>{product.description}</p>
-              <p>Price: ${product.variants[0].prices[0].amount}</p>
+              <p>Price: ${product.price}</p>
             </Link>
           </li>
         ))}
