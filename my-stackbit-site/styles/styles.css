@@ -256,3 +256,14 @@ ul.store-list li {
   margin: 2rem 0rem;
   background: #FAFAFA;
 }
+
+/*---- Individual Product ----*/
+.inner.product-box {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.price {
+  color: darkblue;
+  font-size: 1.5rem;
+}

@@ -20,10 +20,22 @@ const ProductPage = () => {
   }
 
   return (
-    <div>
-      <h1>{product.title}</h1>
-      <p>{product.description}</p>
-      <p>Price: ${product.variants[0].prices[0].amount}</p>
+    <div className="outer product-box">
+      <header className="header outer">
+        <div className="inner">
+          <span>Medusa + Stackbit</span>
+          <span className="header-nav">
+            <a href="/">Home</a>
+            <a href="/store">Store</a>
+          </span>
+        </div>
+      </header>
+      <div className="inner product-box">
+        <h1>{product.title}</h1>
+        <img src={`${product.thumbnail}`} width="320"></img>
+        <p className="description">{product.description}</p>
+        <p className="price">${product.variants[0].prices[0].amount}</p>
+      </div>
     </div>
   );
 };
