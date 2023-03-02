@@ -1,0 +1,312 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #02001d;
+  --color-gray-100: #f3f4f6;
+  --color-gray-500: #75747d;
+  --color-blue: #4c57c5;
+  --color-yellow: #ffde00;
+
+  font-size: 16px;
+}
+
+html,
+body {
+  background-color: var(--color-gray-100);
+  color: var(--color-black);
+  font-family: "Helvetica Neue",sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* --- Layout --- */
+
+.outer {
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48rem;
+}
+
+.small-margin {
+  margin: 1vw;
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: 3rem;
+}
+
+.footer-container {
+  border-top: 1px solid var(--color-gray-500);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.footer-content a {
+  border-bottom: 1px solid var(--color-blue);
+  color: var(--color-blue);
+}
+
+/* --- HeroSection --- */
+
+.hero {
+  background-color: var(--color-black);
+  background-image: url("/bg.svg");
+  background-repeat: repeat;
+  color: var(--color-gray-100);
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+
+.hero-heading {
+  font-size: 3rem;
+}
+
+@media (min-width: 601px) {
+  .hero-heading {
+    font-size: 4rem;
+  }
+}
+
+.hero-subheading {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero-subheading a {
+  border-bottom: 1px solid var(--color-white);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* --- CardGrid --- */
+
+.card-grid {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-grid-heading {
+  font-size: 2.5rem;
+}
+
+.card-grid-subheading {
+  font-size: 1.125rem;
+}
+
+.card-grid-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 601px) {
+  .card-grid-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- Card --- */
+
+.card {
+  border: 1px solid var(--color-blue);
+  padding: 1.5rem 2rem;
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+
+.card:before {
+  border: 1px solid var(--color-blue);
+  content: "";
+  height: 100%;
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  transform: translate(0,0);
+  transition: all 0.35s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.card:hover:before {
+  transform: translate(0.33333em, 0.33333em);
+}
+
+.card-heading {
+  font-size: 1.5rem;
+}
+
+/* --- Button --- */
+
+.button {
+  background-color: var(--color-yellow);
+  border: 0.1rem solid var(--color-yellow);
+  border-radius: 0.2rem;
+  color: var(--color-black);
+  display: inline-block;
+  font-size: 1.125rem;
+  padding: 1rem 1.5rem;
+  transition: all 0.35s ease;
+}
+
+.button.theme-secondary {
+  background-color: transparent;
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+/* ---- Header ---- */
+.header {
+  background: var(--color-blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  padding: 2rem 0rem;
+}
+
+.header-nav {
+  float: right;
+}
+
+.header-nav a {
+  padding-right: 3rem;
+}
+
+.header-nav a:hover {
+  color: var(--color-yellow);
+}
+
+/* ---- Store ---- */
+.outer.heading-box {
+  background-image: url("/bg.svg");
+  background-repeat: repeat;
+  background-color: rgb(193, 189, 189);
+  padding: 5rem 0rem;
+}
+
+.inner.heading-box {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: rgb(4, 4, 83);
+}
+
+.inner.store-box {
+  text-align: center;
+  padding: 1rem 0rem;
+}
+
+ul.store-list {
+  list-style: none;
+}
+
+ul.store-list p {
+  font-size: 1.5rem;
+  color: darkblue;
+}
+
+ul.store-list li {
+  border: 0.1rem solid lightgray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 2rem 0rem;
+  background: #FAFAFA;
+}
+
+/*---- Individual Product ----*/
+.inner.product-box {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.price {
+  color: darkblue;
+  font-size: 1.5rem;
+}
+
+/*---- Cart ----*/
+.outer.cart-box {
+  padding: 2rem 1rem;
+}
+
+.cart-box li {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+/*---- Table ----*/
+table {
+  border-collapse: collapse;
+  border: 3px solid rgb(200,200,200);
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+}
+
+td, th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(235,235,235);
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(245,245,245);
+}
+
+caption {
+  padding: 10px;
+}

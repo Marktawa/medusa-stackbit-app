@@ -1,0 +1,26 @@
+{
+    "type": "SiteConfig",
+    "title": "Stackbit",
+    "footer": {
+        "type": "FooterConfig",
+        "body": "Made by [Stackbit](https://www.stackbit.com/)\n"
+    },
+    "header": {
+        "type": "HeaderConfig",
+        "title": "Medusa + Stackbit",
+        "navLinks": [
+            {
+                "label": "Home",
+                "url": "/"
+            },
+            {
+                "label": "Store",
+                "url": "/store"
+            },
+            {
+                "label": "Cart",
+                "url": "/cart"
+            }
+        ]
+    }
+}
