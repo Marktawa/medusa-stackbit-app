@@ -27,6 +27,7 @@ const ProductPage = () => {
           <span className="header-nav">
             <a href="/">Home</a>
             <a href="/store">Store</a>
+            <a href="/cart">Cart</a>
           </span>
         </div>
       </header>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Link from 'next/link';
+import { addProductToCart } from '../pages/cart';
 
 export const AllProducts = (props) => {
   const [products, setProducts] = useState([]);
@@ -27,9 +28,13 @@ export const AllProducts = (props) => {
               <li key={product.id}>
                 <Link href={`/store/${product.id}`}>
                   <h2>{product.title}</h2>
-                  <img src={`${product.thumbnail}`} width="250"></img>
+                  <img src={`${product.thumbnail}`} width="160"></img>
                   <p>${product.variants[0].prices[0].amount}</p>
                 </Link>
+                <button className="button" onClick={() => { 
+                  addProductToCart(product.variants[0].id); 
+                  alert('Added to Cart');
+                  }}>Add to Cart</button>
               </li>
             ))}
           </ul>
