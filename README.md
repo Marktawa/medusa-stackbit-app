@@ -2,6 +2,8 @@
 
 This repository serves as a code container for the tutorial with the above title.
 
+[**TUTORIAL LINK**](https://dev.to/markmunyaka/how-to-build-an-ecommerce-site-using-medusa-nextjs-and-stackbit-1klb)
+
 ## App Demo
 
 ![App Demo](docs/demo.gif)
